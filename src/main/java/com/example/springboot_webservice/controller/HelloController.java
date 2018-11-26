@@ -35,4 +35,10 @@ public class HelloController {
 		return list;
 	}
 	
+	@GetMapping("/remove")
+	public String delete(int id) {
+		
+		helloSvc.deleteById(id);
+		return "delete success!";
+	}
 }
